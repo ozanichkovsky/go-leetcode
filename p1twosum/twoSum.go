@@ -13,7 +13,7 @@ func twoSum(nums []int, target int) []int {
 }
 
 func twoSum2(nums []int, target int) []int {
-	hash := make(map[int]int)
+	hash := make(map[int]int, len(nums))
 
 	for i, n := range nums {
 		hash[n] = i
@@ -31,7 +31,7 @@ func twoSum2(nums []int, target int) []int {
 }
 
 func twoSum3(nums []int, target int) []int {
-	hash := make(map[int]int)
+	hash := make(map[int]int, len(nums))
 
 	for i := 0; i < len(nums); i++ {
 		complement := target - nums[i]
